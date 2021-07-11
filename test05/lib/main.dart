@@ -34,6 +34,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  Color _c = Colors.blue;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,19 +42,18 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text('Sasa'),
       ),
       body: Center(
-        child: Container(
-          // margin: EdgeInsets.all(20.0),
-          // padding: EdgeInsets.only(top: 100.0,bottom: 50),
-          // padding: EdgeInsets.symmetric(horizontal: 20.0,vertical: 50.0),
-          // transform: Matrix4.rotationZ(0.4),
-          height: 120.0,
-          width: 200.0,
-          alignment: Alignment.center,
-          color: Color(0xff00ff72),
-          child: Text('Weerakoon',
-            style: TextStyle(
-                fontSize: 20.0,
+        child:Ink(
+          child: InkWell(
+            child: Container(
+              width: 200,
+              height: 200,
+              color: _c,
             ),
+            onTap: (){
+              setState(() {
+                _c=_c==Colors.red ? Colors.blue: Colors.red;
+              });
+            },
           ),
         ),
       ),
