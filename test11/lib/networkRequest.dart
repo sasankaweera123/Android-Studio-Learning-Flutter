@@ -18,7 +18,7 @@ class _NetworkRequestState extends State<NetworkRequest> {
   }
 
   Future<void> getNetworkRequest() async{
-    print(await getData());
+    print( await getData());
   }
 
   @override

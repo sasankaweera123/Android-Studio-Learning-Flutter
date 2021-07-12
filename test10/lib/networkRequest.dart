@@ -26,6 +26,7 @@ class _NetworkRequestState extends State<NetworkRequest> {
     });
     print(email +" - "+bioData);
   }
+
   @override
   void initState(){
     super.initState();
